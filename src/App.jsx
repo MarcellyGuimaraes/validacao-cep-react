@@ -33,6 +33,7 @@ function App() {
           className="mx-14 block border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 md:m-0"
           type="text"
           placeholder="00000-000"
+          maxLength={8}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
