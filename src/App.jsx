@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { useState } from 'react'
 import api from './api'
 
@@ -33,7 +32,7 @@ function App() {
         <input
           className="mx-14 block border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 md:m-0"
           type="text"
-          placeholder="Search"
+          placeholder="00000-000"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
