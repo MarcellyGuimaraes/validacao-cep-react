@@ -25,22 +25,28 @@ function App() {
   }
 
   return (
-    <div className="m-4 flex flex-col">
-      <div className="flex">
+    <div className="flex h-screen font-mono flex-col bg-gradient-to-t from-slate-900 to-sky-900 py-16">
+      <h1 className="mb-11 text-center text-2xl font-bold text-white">
+        Buscador de cep
+      </h1>
+      <div className="flex flex-col justify-center md:flex-row">
         <input
-          className="block w-3/4 p-4 pl-10 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="mx-14 block border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 md:m-0"
           type="text"
           placeholder="Search"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <button onClick={handleSearch} className=" w-1/4 bg-red-200">
+        <button
+          onClick={handleSearch}
+          className="mx-14 mt-3 bg-zinc-400 p-3 text-white md:m-0 md:p-0"
+        >
           pesquisar
         </button>
       </div>
 
       {Object.keys(cep).length > 1 && (
-        <div>
+        <div className="mx-5 mt-12 self-center bg-white p-6">
           <p>Cep: {cep.cep}</p>
           <p>Estado: {cep.uf}</p>
           <p>Cidade: {cep.localidade}</p>
